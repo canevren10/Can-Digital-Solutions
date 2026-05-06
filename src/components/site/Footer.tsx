@@ -52,7 +52,19 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <a
-              href="https://wa.me/905XXXXXXXXX"
+              href="mailto:canevren2000@gmail.com"
+              className="text-sm hover:text-white transition-colors w-fit"
+            >
+              canevren2000@gmail.com
+            </a>
+            <a
+              href="tel:+491634522182"
+              className="text-sm hover:text-white transition-colors w-fit"
+            >
+              +49 163 4522182
+            </a>
+            <a
+              href="https://wa.me/491634522182"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-green-400 hover:text-green-300 transition-colors w-fit"
