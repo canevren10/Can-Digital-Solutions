@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Send, MessageCircle, Phone, CheckCircle, Mail } from 'lucide-react'
+import { Send, MessageCircle, CheckCircle, Mail } from 'lucide-react'
 
 type FormData = {
   name: string
@@ -16,6 +16,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const whatsappHref = `https://wa.me/${['49', '163', '452', '2182'].join('')}`
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -76,7 +77,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-5">
               <a
-                href="https://wa.me/491634522182"
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-4 rounded-xl border border-neutral-100 hover:border-green-200 hover:bg-green-50/40 transition-all duration-200"
@@ -85,8 +86,8 @@ export default function Contact() {
                   <MessageCircle size={18} className="text-green-700" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-neutral-900">WhatsApp</div>
-                  <div className="text-xs text-neutral-500">+49 163 4522182</div>
+                  <div className="text-sm font-semibold text-neutral-900">Bana WhatsApp'tan Ulaşın</div>
+                  <div className="text-xs text-neutral-500">Hızlı yanıt için tıklayın</div>
                 </div>
               </a>
 
@@ -100,19 +101,6 @@ export default function Contact() {
                 <div>
                   <div className="text-sm font-semibold text-neutral-900">E-posta</div>
                   <div className="text-xs text-neutral-500">canevren2000@gmail.com</div>
-                </div>
-              </a>
-
-              <a
-                href="tel:+491634522182"
-                className="group flex items-center gap-4 p-4 rounded-xl border border-neutral-100 hover:border-blue-200 hover:bg-blue-50/40 transition-all duration-200"
-              >
-                <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
-                  <Phone size={18} className="text-blue-700" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-neutral-900">Telefon & WhatsApp</div>
-                  <div className="text-xs text-neutral-500">+49 163 4522182</div>
                 </div>
               </a>
 

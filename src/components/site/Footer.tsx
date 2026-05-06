@@ -1,6 +1,7 @@
-import { Zap } from 'lucide-react'
+import { MessageCircle, Zap } from 'lucide-react'
 
 const currentYear = new Date().getFullYear()
+const whatsappHref = `https://wa.me/${['49', '163', '452', '2182'].join('')}`
 
 export default function Footer() {
   return (
@@ -58,18 +59,13 @@ export default function Footer() {
               canevren2000@gmail.com
             </a>
             <a
-              href="tel:+491634522182"
-              className="text-sm hover:text-white transition-colors w-fit"
-            >
-              +49 163 4522182
-            </a>
-            <a
-              href="https://wa.me/491634522182"
+              href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-green-400 hover:text-green-300 transition-colors w-fit"
+              className="text-sm text-green-400 hover:text-green-300 transition-colors w-fit inline-flex items-center gap-2"
             >
-              WhatsApp ile Ulaşın →
+              <MessageCircle size={16} />
+              WhatsApp
             </a>
           </div>
         </div>
